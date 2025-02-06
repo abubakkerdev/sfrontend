@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #F7FCFC !important;
+}
+.Toastify, .commonColor {
+  background-color: #F7FCFC !important;
+}
+
+.commonHeight {
+  height: 100vh;
+}
+.commonBtn {
+  display: flex;
+}
+.alert-danger {
+  padding: 10px 25px !important;
+}
+#footer {
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+  padding-bottom: 25px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.copyright {
+  border-color: transparent !important;
+  padding: 0 !important;
+}
+
+.navmenu ul li a {
+  font-size: 15px !important;
+}
+
+.header .logo h1 {
+  font-size: 27px;
+}
+
+#notfound {
+  position: relative;
+  height: 100vh;
+}
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.notfound {
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+.notfound .notfound-404 {
+  position: relative;
+  height: 200px;
+  margin: 0px auto 20px;
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 236px;
+  font-weight: 200;
+  margin: 0px;
+  color: #211b19;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notfound .notfound-404 h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #211b19;
+  background: #fff;
+  padding: 10px 5px;
+  margin: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+}
+
+.notfound a {
+  color: #fff;
+  background: #5cc5c9;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+  width: 200px;
+  padding: 8px 20px;
+  margin: 65px auto 0;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* Method 1: Hide arrows for all modern browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.thumbnail-change {
+  width: 45px;
+  height: 45px;
+}
+.thumbnail-big {
+  width: 100px;
+  height: 100px;
+}
+
+.customer-errorbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.customer-errorbtnEdit {
+  padding: 10px 15px;
+  background-color: #5cc5c9;
+  border-radius: 5px;
+  color: white;
+}
+.customer-errorbtnEdit:hover {
+  color: white;
+}

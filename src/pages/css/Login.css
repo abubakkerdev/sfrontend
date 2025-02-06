@@ -1,0 +1,64 @@
+
+
+.form-control:focus {
+  box-shadow: none;
+}
+.message-email {
+  font-size: 18px;
+  margin: 14px 0;
+}
+.button-fieldC a {
+  display: block;
+}
+.button-fieldC a:hover {
+  color: white;
+}
+.form-content {
+  width: 25%;
+  padding: 35px;
+  position: absolute;
+  left: 50%;
+  margin-top: 100px;
+  border: 1px solid #4070f430;
+  box-shadow: 2px 3px 7px 1px rgb(0 0 0 / 6%);
+  transform: translateX(-50%);
+  border-radius: 8px;
+}
+.button-fieldC {
+  margin: 18px 0;
+}
+
+.button-fieldBTN {
+  background: #5ac5c9;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.iconposition {
+  position: relative;
+}
+
+.iconfill {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 18px;
+}
+
+.controlMainImg {
+  position: relative;
+}
+.controlMainChild {
+  position: absolute;
+  top: -3px;
+  right: 12px;
+}
+.controlMainbox {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
