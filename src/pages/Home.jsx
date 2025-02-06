@@ -25,7 +25,7 @@ function formatDateTime(timestamp) {
     .replace(",", ",");
 
   return formatted;
-}
+} 
 
 function Home() {
   const { data, isLoading, isSuccess, isError, refetch } =

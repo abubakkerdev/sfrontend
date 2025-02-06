@@ -15,7 +15,7 @@ function MainLayout() {
       if (!userAuth.error) {
         navigate("/login");
       }
-    }
+    } 
   }, [userAuth, navigate]);
 
   return (

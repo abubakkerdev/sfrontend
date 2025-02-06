@@ -54,7 +54,7 @@ function ChangePassword() {
           cpassword: "",
         });
         dispatch(setForgotToken({ forgotToken: "101010" }));
-        destroyCookie("forgotToken");
+        // destroyCookie("forgotToken");
 
         toast.success(data.success.message, {
           position: "top-right",
