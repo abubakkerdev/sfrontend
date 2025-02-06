@@ -10,6 +10,22 @@ import "./css/Login.css";
 
 const loginToken = import.meta.env.VITE_LOGIN_TOKEN;
 
+let getCookie = (cookieName) => {
+  let cookieValue = document.cookie
+    .split(";")
+    .map(
+      (el) =>
+        decodeURIComponent(el.trim()).split("=")[0] == cookieName &&
+        JSON.parse(
+          decodeURIComponent(el.trim())
+            .split("=")[1]
+            .split("s:")[1]
+            .split("}")[0] + "}"
+        )
+    );
+  return cookieValue.find((el) => el && el);
+};
+
 function Login() {
   const [loginUser, { data, isLoading, isSuccess, isError }] =
     useLoginUserMutation();
@@ -52,24 +68,9 @@ function Login() {
   useEffect(() => {
     if (data && !isError) {
       if (data && "success" in data) {
-        let getCookie = (cookieName) => {
-          let cookieValue = document.cookie
-            .split(";")
-            .map(
-              (el) =>
-                decodeURIComponent(el.trim()).split("=")[0] == cookieName &&
-                JSON.parse(
-                  decodeURIComponent(el.trim())
-                    .split("=")[1]
-                    .split("s:")[1]
-                    .split("}")[0] + "}"
-                )
-            );
-          return cookieValue.find((el) => el && el);
-        };
         console.log("Output => ", getCookie("userAllInfo"));
 
-        dispatch(setUserData(getCookie("userAllInfo")));
+        dispatch(setUserData(data.success.cookie));
 
         setLoginInfo({
           email: "",

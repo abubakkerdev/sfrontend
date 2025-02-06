@@ -10,29 +10,13 @@ import "./css/Login.css";
 
 const resetToken = import.meta.env.VITE_API_BACKEND_POST_TOKEN;
 
-const getCookie = (cookieName) => {
-  let cookieValue = document.cookie
-    .split(";")
-    .map(
-      (el) =>
-        decodeURIComponent(el.trim()).split("=")[0] == cookieName &&
-        JSON.parse(
-          decodeURIComponent(el.trim())
-            .split("=")[1]
-            .split("s:")[1]
-            .split("}")[0] + "}"
-        )
-    );
-  return cookieValue.find((el) => el && el);
-};
-
 function Forgot() {
   const [resetPassword, { data, isLoading, isSuccess, isError }] =
     useResetPasswordMutation();
   const userAuth = useSelector(
     (state) => state.userInfo.userLoginInfo.infoUser
   );
- 
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
@@ -50,7 +34,9 @@ function Forgot() {
     if (data && !isError) {
       if (data && "success" in data) {
         setEmail("");
-        dispatch(setForgotToken(getCookie("forgotToken")));
+
+        dispatch(setForgotToken(data.success.cookie));
+
         toast.success(data.success.message, {
           position: "top-right",
           onClose: () => {

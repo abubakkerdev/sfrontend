@@ -26,7 +26,7 @@ const initialState = {
       : { forgotToken: "101010" },
   },
 };
-  
+
 export const userSlice = createSlice({
   name: "user",
   initialState,

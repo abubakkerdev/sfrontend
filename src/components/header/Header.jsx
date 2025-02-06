@@ -11,7 +11,7 @@ function Header() {
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    // destroyCookie("userAllInfo");
+    destroyCookie("userAllInfo");
     dispatch(setUserData({ error: false }));
     navigate("/login");
   };

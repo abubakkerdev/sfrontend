@@ -17,7 +17,7 @@ function MainLayout() {
       }
     } 
   }, [userAuth, navigate]);
-
+ 
   return (
     <>
       <Header />
